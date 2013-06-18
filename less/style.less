@@ -4,6 +4,7 @@
 @bgColor:rgb(243, 250, 252);
 @fontColor:black;
 @highlightColor:rgb(64, 126, 148);
+@hoverColor:rgb(90, 165, 193);
 @borderColor:rgb(155, 155, 155);
 @colorVariance:3%;
 
@@ -22,7 +23,7 @@ a {
 	text-decoration: none;
 	color:@highlightColor;
 	&:hover {
-		color:rgb(90, 165, 193);
+		color:@hoverColor;
 	}
 }
 h1,h2,h3 { 
@@ -46,6 +47,7 @@ article {
 
 	h1 {
 		display:inline;
+		cursor:pointer;
 	}
 	&.active {
 		h1 {
@@ -69,7 +71,7 @@ article.active {
 	width: 45px;
 	display: inline-block;
 }
-.reveal {
+.content-container {
 	height:0;
 	overflow:hidden;
 	-webkit-transition: height 200ms ease-in;
@@ -78,9 +80,20 @@ article.active {
     -o-transition: height 200ms ease-in;
 	transition: height 200ms ease-in;
 }
+a.viewsource {
+	position:absolute;
+	top:0;
+	right:0;
+	padding:5px 8px;
+	background:@highlightColor;
+	color:white;
+	&:hover {
+		background-color:@hoverColor;
+	};
+}
 
 #hello { 
-
+	text-align: center;
 	h1 {
 		font-size: 50px;		
 	}
@@ -93,7 +106,7 @@ article.active {
 	.hoverHighlight;
 	background-color:darken(@bgColor, @colorVariance*1);
 }
-#projects { 
+#projects {
 	.hoverHighlight;
 	background-color:darken(@bgColor, @colorVariance*2);
 }

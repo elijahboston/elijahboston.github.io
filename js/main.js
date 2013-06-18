@@ -1,7 +1,7 @@
 // main.js
 $('h1.open-content').click(function(event) {
 	var parent = $(this).parent().parent('article'),
-		child = parent.children('.reveal');
+		child = parent.children('.content-container');
 
 	if (parent.hasClass('active')) {
 		// close
@@ -11,7 +11,7 @@ $('h1.open-content').click(function(event) {
 		// open
 
 		// close all other tabs
-		$('article').removeClass().children('.reveal').css('height','0');
+		$('article').removeClass().children('.content-container').css('height','0');
 
 		// open this tab
 		parent.addClass('active');
