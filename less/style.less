@@ -106,6 +106,17 @@ a.viewsource {
 #projects {
 	.hoverHighlight;
 	background-color:darken(@bgColor, @colorVariance*2);
+
+	.project {
+		border-bottom:5px dotted white;
+		margin-bottom:@normalPadding;
+		.screenshot {
+			margin-bottom: @normalPadding;
+		}
+		&:last-child {
+			border-bottom:none;
+		}
+	}
 }
 #resume { 
 	.hoverHighlight;
