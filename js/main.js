@@ -1,4 +1,7 @@
 // main.js
+
+//$('#hello,#projects,#resume').height(window.innerHeight);
+
 $('h1.open-content').click(function(event) {
 	var parent = $(this).parent().parent('article'),
 		child = parent.children('.content-container');
