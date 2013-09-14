@@ -1,58 +1,57 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
-
 body {
-	text-align: center;
+	padding-top:50px;
+	padding-bottom: 80px;
+	//background: url('../img/bg2.jpg');
+	background: url('../img/use_your_illusion.png');
+	//background-size: cover;
+	//background-position: center center;
+	font-family: 'Open Sans', Verdana, Geneva, sans-serif;
+	font-size:22px;
+}
+.navbar {
+	//background: #fff;
 }
 .container {
-	width:100;
+	//width:100%;
+}
+.row {
+	padding:20px;
+	//margin:0;
+}
+@media (min-width: @screen-desktop) {
+	//.container { max-width: inherit; }
 }
 
-@helloBg:rgb(0, 214, 255);
+@media (min-width: @screen-tablet) and (max-width: @screen-tablet-max) {
+	//.container { max-width: inherit; }
+}
 
-.contentPadding {
-	padding-top: 40px;
-	padding-bottom: 40px;
+@media screen and (max-width: 400px) {
+}
+ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}	
+ul.details {
+	margin:initial;
+	padding:initial;
+}
+.inactive {
+	text-decoration: line-through;
+}
+#quote {
+
+	background-color: white;
+	padding:20px;
 }
 #hello {
-	.contentPadding;
-	color:white;
-	background:@helloBg;
-	//border-bottom:1px solid darken(@helloBg, 10%);
-	text-align:center;
-	h1 { 
-		font-size: 76px;
-	}
-}
-#projects {
-	.contentPadding;
-	
-	#slider {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 606px;
-	}
-	
-	.carousel {
-		.carousel-control {
-			/*
-			.icon-next, 
-			.icon-prev {
-				font-size: 145px;
-				top:36%;
-			}
-			*/
-			&.left,
-			&.right {
-				font-size:inherit;
-				color:black;
-				background-image: none;
-			}			
-		}
-	}
-	.item {
-		text-align: center;
-		.caption {
+	//background:rgba(255,255,255,.5);
 
-		}
+}
+#about {
+	a {
+		text-decoration: none;
 	}
 }
